@@ -4,42 +4,22 @@
     <meta charset="utf-8">
     <title>Abbad Chamma Awesome Cat | ITIS3135 | Home </title>
     <link rel="stylesheet" href="styles/default.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script> 
+    <script src="scripts/HTMLInclude.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>Abbad Chamma Awesome Cat | ITIS3135</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        ||
-        <a href="introduction.html">Introduction</a>
-        ||
-        <a href="contract.html">Contract</a>
-        ||
-        <a href="stuff/MY CRAPPY PAGE 😈.htm">Crappy Page</a>
-      </nav>
-    </header>
+    <div data-include="components/header.html"></div>
 
     <main>
       <h2>Home</h2>
       <p>Hello, you've made it to my 3135 Course Page</p>
     </main>
 
-    <footer>
-      <nav>
-        <a href="https://webpages.charlotte.edu/achamma/">Charlotte.edu</a>
-        ||
-        <a href="https://github.com/AbbadCha/AbbadCha.github.io">GitHub</a>
-        ||
-        <a href="https://abbadcha.github.io/itis3135/index.html">ITIS3135.io</a>
-        ||
-        <a href="https://www.freecodecamp.org/Abbadch">FreeCodeCamp</a>
-        ||
-        <a href="https://www.codecademy.com/profiles/Abbadch">Codecademy</a>
-        ||
-        <a href="http://www.linkedin.com/in/abbad-chamma">LinkedIn</a>
-      </nav>
-      <p> Page Built by <a href="AweosomeCat.com/index.html">AweosomeCat Enterprises</a> | &copy;2023</p>
+    <div data-include="components/footer.html"></div>
+
+    <script>
+      document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+      document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
 
           
           
