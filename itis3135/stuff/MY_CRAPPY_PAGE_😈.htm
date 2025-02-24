@@ -15,14 +15,7 @@
     </style>
 </head>
 <body style="background-color: white; margin: 0; padding: 50px 0 0 0;">
-    <nav style="background-color: pink; padding: 10px; text-align: center; border: 3px dotted green;">
-        <a href="../index.html" style="color: purple; text-decoration: blink; margin: 0 5px; font-family: 'Comic Sans MS';">HOME PAGE</a> |
-        <a href="../introduction.html" style="color: brown; text-decoration: overline; margin: 0 5px; font-family: Papyrus;">INTRODUCTION</a> |
-        <a href="../contract.html" style="color: orange; text-decoration: line-through; margin: 0 5px; font-family: 'Times New Roman';">CONTRACT</a> |
-        <a href="../tables.html" style="color: red; font-weight: bold; margin: 0 5px;">TABLES</a> |
-        <a href="../forms.html" style="color: blue; font-style: italic; margin: 0 5px;">FORMS</a> |
-        <a href="../website_evaluations.html" style="color: green; text-transform: uppercase; margin: 0 5px;">WEBSITE EVALUATIONS</a>
-    </nav>
+    <div data-include="components/header.html"></div>
     <h2 style="font-family: 'Comic Sans MS'; text-align: center; color: black;">Welcome to my page!</h2>
     <h1 style="font-family: Papyrus; text-align: center; color: black;">THIS IS A SMALLER HEADER AFTER A BIGGER ONE</h1>
     
@@ -57,9 +50,8 @@
         </p>
     </div>
 
-    <a href="http://www.example.com">This link stays default blue!</a>
+    <div data-include="components/footer.html"></div>
 
-    <br><br><br><br><br>
-    <!-- Extra line breaks for maximum crappiness -->
+    <script src="../scripts/include.js"></script>
 </body>
 </html>
