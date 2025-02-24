@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Chamma Enterprises | Web Design &amp; Development</title>
-    <script src="../scripts/HTMLInclude.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <!-- Color scheme from Coolors: https://coolors.co/2d3142-4f5d75-bfc0c0-ffffff-ef8354 -->
     <style>
         body {
@@ -94,7 +94,12 @@
     </style>
 </head>
 <body>
-    <div data-include="components/header.html"></div>
+    <header>
+        <div class="logo-container">
+            <img src="images/ce-logo.png" alt="Chamma Enterprises Logo" class="logo" width="50" height="50">
+            <h1>Chamma Enterprises</h1>
+        </div>
+    </header>
 
     <main>
         <h2>Innovative Web Solutions</h2>
@@ -123,11 +128,9 @@
         </div>
     </main>
 
-    <div data-include="components/footer.html"></div>
-
-    <script>
-        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    </script>
+    <footer>
+        <em>Transforming Ideas into Digital Excellence</em>
+        <p>&copy; 2024 Chamma Enterprises</p>
+    </footer>
 </body>
 </html>
