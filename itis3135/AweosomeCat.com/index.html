@@ -4,10 +4,19 @@
     <meta charset="utf-8">
     <title>Awesome Cat | Home</title>
     <link rel="stylesheet" href="styles/business.css">
-    <script src="../scripts/HTMLInclude.js" defer></script>
 </head>
 <body>
-    <div data-include="components/header.html"></div>
+    <header>
+        <h1>Awesome Cat</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            ||
+            <a href="about.html">About</a>
+            ||
+            <a href="../index.html">Course Home</a>
+        </nav>
+        <em>Where Purr-fect Matches Happen!</em>
+    </header>
 
     <main>
         <h2>Welcome to Awesome Cat</h2>
@@ -24,7 +33,26 @@
         </section>
     </main>
 
-    <div data-include="components/footer.html"></div>
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/achamma1/" target="_blank">Charlotte.edu</a> |
+            <a href="https://github.com/AbbadCha" target="_blank">Github</a> |
+            <a href="https://abbadcha.github.io/" target="_blank">Github.io</a> |
+            <a href="https://abbadcha.github.io/itis3135/" target="_blank">ITIS 3135 Home</a> |
+            <a href="https://www.freecodecamp.org/achamma1" target="_blank">freeCodeCamp</a> |
+            <a href="https://www.codecademy.com/profiles/achamma1" target="_blank">Codecademy</a>
+        </nav>
+        <br>
+        <p>
+            Page built by Abbad
+        </p>
+        <a href="https://validator.w3.org/check?uri=" id="validation_link_html">
+            <img src="../images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML.">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=" id="validation_link_css">
+            <img src="../images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS.">
+        </a>
+    </footer>
 
     <script>
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
