@@ -48,6 +48,14 @@ a:hover {
     text-decoration: underline;
 }
 
+.profile-image {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 footer {
     margin-top: 40px;
     padding-top: 20px;
