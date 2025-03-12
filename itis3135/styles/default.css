@@ -1,4 +1,13 @@
 /* default.css for Awesome Cats theme */
+/* Base styles */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f0e1; 
@@ -26,7 +35,8 @@ h2, h3 {
 
 /* Layout containers */
 header, main, footer {
-    max-width: 800px;
+    width: 95%;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
@@ -72,7 +82,128 @@ footer {
     font-size: 0.9em;
 }
 
+/* Media Queries for Responsive Design */
+
+/* Desktop (default styles above) */
+
+/* Tablet Devices */
+@media screen and (max-width: 980px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .profile-image {
+        max-width: 250px;
+    }
+
+    nav ul {
+        padding: 0 10px;
+    }
+
+    nav li {
+        margin: 0 8px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2, h3 {
+        font-size: 1.2em;
+    }
+    
+    main {
+        padding: 15px;
+        width: 98%;
+    }
+    
+    .profile-image {
+        max-width: 200px;
+    }
+    
+    p {
+        font-size: 0.95em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+}
+
+/* Media Queries for Responsive Design */
+
+/* Desktop (default styles above) */
+
+/* Tablet Devices */
+@media screen and (max-width: 980px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .profile-image {
+        max-width: 250px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2, h3 {
+        font-size: 1.2em;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    .profile-image {
+        max-width: 200px;
+    }
+    
+    p {
+        font-size: 0.95em;
+    }
+}
+
 main {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
