@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Journey | ITIS 3135</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+            --accent-color: #3498db;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-divider {
+            color: white;
+            margin: 0 0.5rem;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        figure {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        figcaption {
+            margin-top: 1rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .prompt-text {
+            font-style: italic;
+            color: var(--text-color);
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .nav-divider {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Photography Journey</h1>
+        <nav>
+            <a href="#what" class="nav-link" data-section="what">Home</a>
+            <span class="nav-divider">📸</span>
+            <a href="#who" class="nav-link" data-section="who">About</a>
+            <span class="nav-divider">📸</span>
+            <a href="#when" class="nav-link" data-section="when">Best Times</a>
+            <span class="nav-divider">📸</span>
+            <a href="#where" class="nav-link" data-section="where">Locations</a>
+            <span class="nav-divider">📸</span>
+            <a href="#how" class="nav-link" data-section="how">Equipment</a>
+            <span class="nav-divider">📸</span>
+            <a href="#why" class="nav-link" data-section="why">Inspiration</a>
+            <span class="nav-divider">📸</span>
+            <a href="#ai-prompts" class="nav-link" data-section="ai-prompts">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="what" class="active">
+            <h2>Welcome to My Photography Journey</h2>
+            <p>Photography is more than just capturing moments; it's about telling stories through visual narratives. As a passionate photographer, I've discovered that every click of the shutter opens up new possibilities for creative expression.</p>
+            <figure>
+                <img src="images/camera-sunset.jpg" alt="Camera silhouette against a sunset">
+                <figcaption>The Art of Capturing Moments</figcaption>
+            </figure>
+            <p class="prompt-text">AI Image Prompt: "A professional DSLR camera silhouetted against a warm, golden sunset, with lens flare and dramatic clouds, digital art style"</p>
+            <p>Through this website, I'll share my experiences, techniques, and the joy of capturing life's beautiful moments through the lens.</p>
+        </section>
+
+        <section id="who">
+            <h2>About the Photographer</h2>
+            <p>I'm a passionate photographer who believes in capturing authentic moments and creating lasting memories. My journey began five years ago when I picked up my first DSLR camera.</p>
+            <figure>
+                <img src="images/photographer-portrait.jpg" alt="Photographer in action">
+                <figcaption>Capturing Life Through the Lens</figcaption>
+            </figure>
+            <p class="prompt-text">AI Image Prompt: "A photographer in action, viewed from behind, holding a camera in a natural setting with soft lighting, digital painting style"</p>
+            <p>My style focuses on natural light photography and candid moments, believing that the best photos are those that tell authentic stories.</p>
+        </section>
+
+        <section id="when">
+            <h2>Best Times for Photography</h2>
+            <p>Timing is crucial in photography. The golden hour (just after sunrise or before sunset) provides the most magical lighting conditions for outdoor photography.</p>
+            <figure>
+                <img src="images/golden-hour.jpg" alt="Golden hour photography">
+                <figcaption>The Magic of Golden Hour</figcaption>
+            </figure>
+            <p class="prompt-text">AI Image Prompt: "A landscape during golden hour with long shadows and warm golden light, showing a peaceful nature scene, digital art style"</p>
+            <p>Blue hour, just before sunrise or after sunset, offers unique opportunities for urban and architectural photography with its soft, diffused light.</p>
+        </section>
+
+        <section id="where">
+            <h2>Perfect Photography Locations</h2>
+            <p>The best photography locations combine natural beauty with interesting compositional elements. Urban environments offer geometric patterns and architectural details.</p>
+            <figure>
+                <img src="images/urban-scene.jpg" alt="Urban photography location">
+                <figcaption>Urban Photography Paradise</figcaption>
+            </figure>
+            <p class="prompt-text">AI Image Prompt: "A modern city street with interesting architecture, leading lines, and dramatic lighting, digital art style"</p>
+            <p>Natural landscapes provide endless opportunities for capturing dramatic scenes and peaceful moments in nature.</p>
+        </section>
+
+        <section id="how">
+            <h2>Essential Photography Equipment</h2>
+            <p>While gear isn't everything, having the right equipment can help you achieve your creative vision. A good camera body and versatile lenses are fundamental.</p>
+            <figure>
+                <img src="images/camera-gear.jpg" alt="Photography equipment layout">
+                <figcaption>Essential Photography Gear</figcaption>
+            </figure>
+            <p class="prompt-text">AI Image Prompt: "A flat lay of photography equipment including camera body, lenses, and accessories, arranged neatly on a wooden surface, digital art style"</p>
+            <p>Beyond the camera, accessories like tripods, filters, and lighting equipment can expand your creative possibilities.</p>
+        </section>
+
+        <section id="why">
+            <h2>Why Photography Matters</h2>
+            <p>Photography helps us preserve memories, tell stories, and share perspectives. It's a powerful medium for self-expression and communication.</p>
+            <figure>
+                <img src="images/memory-wall.jpg" alt="Wall of photographs">
+                <figcaption>Preserving Memories Through Photography</figcaption>
+            </figure>
+            <p class="prompt-text">AI Image Prompt: "A wall covered in hanging photographs of various sizes, showing different moments and memories, warm lighting, digital art style"</p>
+            <p>Through photography, we can freeze moments in time and share our unique view of the world with others.</p>
+        </section>
+
+        <section id="ai-prompts">
+            <h2>AI Content Used in This Website</h2>
+            <p>All images on this website were generated using AI with specific prompts to maintain a consistent digital art style. Here are all the prompts used:</p>
+            <ul>
+                <li>Home page: "A professional DSLR camera silhouetted against a warm, golden sunset, with lens flare and dramatic clouds, digital art style"</li>
+                <li>About page: "A photographer in action, viewed from behind, holding a camera in a natural setting with soft lighting, digital painting style"</li>
+                <li>Best Times page: "A landscape during golden hour with long shadows and warm golden light, showing a peaceful nature scene, digital art style"</li>
+                <li>Locations page: "A modern city street with interesting architecture, leading lines, and dramatic lighting, digital art style"</li>
+                <li>Equipment page: "A flat lay of photography equipment including camera body, lenses, and accessories, arranged neatly on a wooden surface, digital art style"</li>
+                <li>Inspiration page: "A wall covered in hanging photographs of various sizes, showing different moments and memories, warm lighting, digital art style"</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by <a href="../chammaenterprises.co/">Chamma Enterprises</a> &copy; 2025</p>
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer">
+                <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
+            </a>
+            &nbsp;
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show the home section by default
+            document.getElementById('what').classList.add('active');
+
+            // Add click handlers to all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    
+                    // Hide all sections
+                    document.querySelectorAll('section').forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    
+                    // Show the selected section
+                    document.getElementById(sectionId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
