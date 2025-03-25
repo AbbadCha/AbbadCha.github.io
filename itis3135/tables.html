@@ -9,40 +9,40 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
       /* Table Styles */
-      table {
+      .data-table {
         border-collapse: collapse;
-        width: 100%;
         margin: 20px 0;
         font-family: 'Open Sans', sans-serif;
       }
 
-      th, td {
+      .data-table th,
+      .data-table td {
         border: 1px solid #ddd;
         padding: 12px;
         text-align: left;
       }
 
       /* Dark header using pseudo-class */
-      tr:first-child {
+      .data-table thead tr {
         background-color: #2c3e50;
         color: white;
       }
 
       /* Alternating rows using pseudo-classes */
-      tbody tr:nth-child(odd) {
+      .data-table tbody tr:nth-child(odd) {
         background-color: #ecf0f1;
       }
 
-      tbody tr:nth-child(even) {
+      .data-table tbody tr:nth-child(even) {
         background-color: #ffffff;
       }
 
       /* Caption styling */
-      figure {
+      .table-figure {
         margin: 20px 0;
       }
 
-      figcaption {
+      .table-caption {
         text-align: center;
         font-style: italic;
         margin: 10px 0;
@@ -50,7 +50,8 @@
       }
 
       /* Accessibility focus styles */
-      th:focus, td:focus {
+      .data-table th:focus,
+      .data-table td:focus {
         outline: 2px solid #3498db;
         outline-offset: -2px;
       }
@@ -59,7 +60,7 @@
   <body>
     <header>
       <h1>Abbad Chamma Awesome Cat | ITIS3135</h1>
-      <h2>The Awesome Cat's Tables</h2>
+      <p class="subtitle">The Awesome Cat's Tables</p>
       <nav>
         <a href="index.html">Home</a>
         ||
@@ -91,7 +92,7 @@
       </ol>
 
       <h3>Employee Data in Simple Table</h3>
-      <table>
+      <table class="data-table">
         <tr>
           <th>Name</th>
           <th>Email</th>
@@ -135,8 +136,8 @@
       </table>
 
       <h3>Employee Data in Complex Table</h3>
-      <figure>
-        <table>
+      <figure class="table-figure">
+        <table class="data-table">
           <caption>Employee Information - Awesome Cat Enterprise Staff Overview</caption>
           <thead>
             <tr>
