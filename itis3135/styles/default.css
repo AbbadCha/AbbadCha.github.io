@@ -1,11 +1,7 @@
 /* default.css for Awesome Cats theme */
 /* Base styles */
-html {
+.page-container {
     box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
 }
 
 body {
@@ -35,11 +31,11 @@ h2, h3 {
 
 /* Layout containers */
 header, main, footer {
-    width: 95%;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 p {
