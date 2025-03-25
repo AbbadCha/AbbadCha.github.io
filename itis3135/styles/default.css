@@ -13,37 +13,39 @@ body {
     padding: 20px;
 }
 
-/* Header styles */
-.page-header {
-    font-size: 2.5em;
+/* Typography */
+.text-primary {
     color: #e67e22;
     text-align: center;
+}
+
+.text-title {
+    font-size: 2.5em;
     margin-bottom: 20px;
     border-bottom: 3px solid #e67e22;
     padding-bottom: 10px;
 }
 
-.section-header {
-    color: #e67e22; 
-    text-align: center;
-    margin-bottom: 20px;
+.text-section {
     font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-.subsection-header {
-    color: #e67e22; 
-    text-align: center;
-    margin-bottom: 20px;
+.text-subsection {
     font-size: 1.25em;
+    margin-bottom: 20px;
 }
 
 /* Layout containers */
-header, main, footer {
+.container {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
     box-sizing: border-box;
+}
+
+.container-padding {
+    padding: 20px;
 }
 
 p {

@@ -58,8 +58,8 @@
     </style>
   </head>
   <body class="page-container">
-    <header>
-      <h1 class="page-header">Abbad Chamma Awesome Cat | ITIS3135</h1>
+    <header class="container container-padding">
+      <h1 class="text-primary text-title">Abbad Chamma Awesome Cat | ITIS3135</h1>
       <p class="subtitle">The Awesome Cat's Tables</p>
       <nav>
         <a href="index.html">Home</a>
@@ -76,12 +76,12 @@
       </nav>
     </header>
 
-    <main>
-      <h2 class="section-header">HTML Tables Exercise</h2>
+    <main class="container container-padding">
+      <h2 class="text-primary text-section">HTML Tables Exercise</h2>
       <!-- Using p tag instead of duplicate headings for better accessibility -->
       <p>Empowering Business Through Structured Data</p>
       
-      <h3 class="subsection-header">My Tabular Data</h3>
+      <h3 class="text-primary text-subsection">My Tabular Data</h3>
       <ol>
         <li>John Smith - jsmith@gmail.com - 15 years</li>
         <li>Sarah Johnson - sjohnson@yahoo.com - 8 years</li>
@@ -92,14 +92,17 @@
         <li>David Kim - dkim@awesomecat.com - 7 years</li>
       </ol>
 
-      <h3 class="subsection-header">Employee Data in Simple Table</h3>
+      <h3 class="text-primary text-subsection">Employee Data in Simple Table</h3>
       <table class="data-table">
-        <tr>
+        <thead>
+          <tr>
           <th>Name</th>
           <th>Email</th>
           <th>Years of Service</th>
         </tr>
-        <tr>
+        </thead>
+        <tbody>
+          <tr>
           <td>John Smith</td>
           <td>jsmith@gmail.com</td>
           <td>15</td>
@@ -136,7 +139,7 @@
         </tr>
       </table>
 
-      <h3 class="subsection-header">Employee Data in Complex Table</h3>
+      <h3 class="text-primary text-subsection">Employee Data in Complex Table</h3>
       <figure class="table-figure">
         <table class="data-table">
           <caption>Employee Information - Awesome Cat Enterprise Staff Overview</caption>
@@ -205,7 +208,7 @@
       </figure>
     </main>
 
-    <footer>
+    <footer class="container container-padding">
       <nav>
         <a href="https://validator.w3.org/check?uri=referer">Validate HTML</a>
         ||
