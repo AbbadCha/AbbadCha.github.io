@@ -248,16 +248,16 @@ main {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
 .page-designs .page-design {
     margin-bottom: 2rem;
     padding: 1rem;
     background-color: #f8f9fa;
     border-radius: 4px;
-}
-
-h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
 }
 
 .dynamic-features ul li {
