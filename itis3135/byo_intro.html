@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Abbad Chamma Awesome Cat | ITIS3135 | BYO Introduction</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/survey.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Abbad Chamma Awesome Cat | ITIS3135</h1>
+        <nav>
+            <a href="index.html">Home</a> ||
+            <a href="introduction.html">Introduction</a> ||
+            <a href="contract.html">Contract</a> ||
+            <a href="byo_intro.html">BYO Intro</a> ||
+            <a href="stuff/MY_CRAPPY_PAGE_😈.htm">Crappy Page</a> ||
+            <a href="website_evaluations.html">Website Evaluations</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Build Your Own Introduction</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+
+        <form id="introForm" onsubmit="return handleSubmit(event)">
+            <div class="form-group">
+                <label for="name"><strong>Name:</strong></label>
+                <input type="text" id="name" name="name" required value="Abbad Chamma">
+            </div>
+
+            <div class="form-group">
+                <label for="mascot"><strong>Mascot:</strong></label>
+                <input type="text" id="mascot" name="mascot" required value="Awesome Cat">
+            </div>
+
+            <div class="form-group">
+                <label for="image"><strong>Image:</strong></label>
+                <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" required>
+            </div>
+
+            <div class="form-group">
+                <label for="imageCaption"><strong>Image Caption:</strong></label>
+                <input type="text" id="imageCaption" name="imageCaption" required value="Enjoying coffee in style">
+            </div>
+
+            <div class="form-group">
+                <label for="personalBackground"><strong>Personal Background:</strong></label>
+                <textarea id="personalBackground" name="personalBackground" required>I was born and raised in Charlotte, NC.</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="professionalBackground"><strong>Professional Background:</strong></label>
+                <textarea id="professionalBackground" name="professionalBackground" required>Experience in financial services and tech projects.</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="academicBackground"><strong>Academic Background:</strong></label>
+                <textarea id="academicBackground" name="academicBackground" required>Senior at UNCC majoring in Computer Science.</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="webdevBackground"><strong>Background in Web Development:</strong></label>
+                <textarea id="webdevBackground" name="webdevBackground" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="computerPlatform"><strong>Primary Computer Platform:</strong></label>
+                <input type="text" id="computerPlatform" name="computerPlatform" required value="Windows">
+            </div>
+
+            <div class="form-group">
+                <label><strong>Courses I'm Taking & Why:</strong></label>
+                <div id="coursesContainer">
+                    <div class="course-entry">
+                        <input type="text" name="courses[]" placeholder="Course name - reason for taking" required>
+                        <button type="button" class="delete-course" onclick="deleteCourse(this)">Delete</button>
+                    </div>
+                </div>
+                <button type="button" onclick="addCourse()">Add Course</button>
+            </div>
+
+            <div class="form-group">
+                <label for="funnyThing"><strong>Funny thing?</strong></label>
+                <input type="text" id="funnyThing" name="funnyThing">
+            </div>
+
+            <div class="form-group">
+                <label for="anythingElse"><strong>Anything else?</strong></label>
+                <textarea id="anythingElse" name="anythingElse"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
+                </label>
+            </div>
+
+            <div class="form-controls">
+                <input type="submit" value="Submit" class="button">
+                <input type="reset" value="Reset Form" class="button">
+            </div>
+        </form>
+
+        <div id="result" style="display: none;">
+            <!-- Results will be displayed here -->
+            <button onclick="resetForm()" class="button">Create New Introduction</button>
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/achamma/" target="_blank">Charlotte.edu</a> ||
+            <a href="https://github.com/AbbadCha" target="_blank">Github</a> ||
+            <a href="https://abbadcha.github.io/" target="_blank">Github.io</a> ||
+            <a href="https://abbadcha.github.io/itis3135/" target="_blank">ITIS 3135 Github Pages</a> ||
+            <a href="https://www.freecodecamp.org/abbadchamma/" target="_blank">freeCodeCamp</a> ||
+            <a href="https://www.codecademy.com/profiles/abbadchamma" target="_blank">Codecademy</a>
+        </nav>
+        <p>Page built by Chamma Enterprises</p>
+        <a href="https://validator.w3.org/check?uri=referer">
+            <img src="images/button-valid-html5.gif" width="88" height="31" alt="Link to HTML validator">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="images/button-valid-css.gif" width="88" height="31" alt="Link to CSS validator">
+        </a>
+    </footer>
+</body>
+</html>
