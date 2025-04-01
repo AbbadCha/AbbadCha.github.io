@@ -263,6 +263,7 @@ main {
 .form-group input[type="tel"],
 .form-group input[type="email"],
 .form-group select {
+    box-sizing: border-box;
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
