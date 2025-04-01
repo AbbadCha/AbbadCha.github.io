@@ -36,7 +36,7 @@ function handleSubmit(event) {
     
     // Create the introduction content matching your introduction.html format
     const introContent = `
-        <h2>${document.getElementById('name').value} || ${document.getElementById('mascot').value}</h2>
+        <h2 class="heading-secondary">${document.getElementById('name').value} || ${document.getElementById('mascot').value}</h2>
         
         <figure>
             <img id="uploadedImage" alt="Uploaded image" style="max-width: 300px;">
@@ -44,35 +44,35 @@ function handleSubmit(event) {
         </figure>
 
         <section class="background-info">
-            <h3><strong>Personal Background</strong></h3>
+            <h3 class="heading-tertiary"><strong>Personal Background</strong></h3>
             <p>${document.getElementById('personalBackground').value}</p>
 
-            <h3><strong>Professional Background</strong></h3>
+            <h3 class="heading-tertiary"><strong>Professional Background</strong></h3>
             <p>${document.getElementById('professionalBackground').value}</p>
 
-            <h3><strong>Academic Background</strong></h3>
+            <h3 class="heading-tertiary"><strong>Academic Background</strong></h3>
             <p>${document.getElementById('academicBackground').value}</p>
 
-            <h3><strong>Background in Web Development</strong></h3>
+            <h3 class="heading-tertiary"><strong>Background in Web Development</strong></h3>
             <p>${document.getElementById('webdevBackground').value}</p>
 
-            <h3><strong>Primary Computer Platform</strong></h3>
+            <h3 class="heading-tertiary"><strong>Primary Computer Platform</strong></h3>
             <p>${document.getElementById('computerPlatform').value}</p>
 
-            <h3><strong>Courses I'm Taking, & Why</strong></h3>
+            <h3 class="heading-tertiary"><strong>Courses I'm Taking, & Why</strong></h3>
             <ul>
                 ${Array.from(document.getElementsByName('courses[]'))
-                    .map(course => `<li><strong>${course.value}</strong></li>`)
+                    .map((course) => `<li><strong>${course.value}</strong></li>`)
                     .join('')}
             </ul>
 
             ${document.getElementById('funnyThing').value ? `
-                <h3><strong>Funny Thing About Me</strong></h3>
+                <h3 class="heading-tertiary"><strong>Funny Thing About Me</strong></h3>
                 <p>${document.getElementById('funnyThing').value}</p>
             ` : ''}
 
             ${document.getElementById('anythingElse').value ? `
-                <h3><strong>Additional Information</strong></h3>
+                <h3 class="heading-tertiary"><strong>Additional Information</strong></h3>
                 <p>${document.getElementById('anythingElse').value}</p>
             ` : ''}
         </section>
@@ -85,7 +85,7 @@ function handleSubmit(event) {
     // Display the uploaded image
     if (file) {
         const reader = new FileReader();
-        reader.onload = function(e) {
+        reader.onload = (e) => {
             document.getElementById('uploadedImage').src = e.target.result;
         };
         reader.readAsDataURL(file);

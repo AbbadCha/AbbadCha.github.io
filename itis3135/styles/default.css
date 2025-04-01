@@ -1,13 +1,20 @@
 /* default.css for Awesome Cats theme */
 /* Base styles */
-.page-container {
+:root {
+    --primary-color: #e67e22;
+    --text-color: #2c3e50;
+    --bg-color: #f5f0e1;
+    --link-color: #d35400;
+}
+
+* {
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f0e1; 
-    color: #2c3e50; 
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
     line-height: 1.6;
     margin: 0;
     padding: 20px;
@@ -90,15 +97,13 @@ footer {
 
 /* Media Queries for Responsive Design */
 
-/* Desktop (default styles above) */
-
 /* Tablet Devices */
 @media screen and (max-width: 980px) {
     body {
         padding: 15px;
     }
     
-    h1 {
+    .heading-primary {
         font-size: 2em;
     }
     
@@ -125,17 +130,18 @@ footer {
         padding: 10px;
     }
     
-    h1 {
+    .heading-primary {
         font-size: 1.8em;
     }
     
-    h2, h3 {
+    .heading-secondary,
+    .heading-tertiary {
         font-size: 1.2em;
     }
     
     main {
         padding: 15px;
-        width: 98%;
+        max-width: 98%;
     }
     
     .profile-image {
@@ -156,59 +162,8 @@ footer {
     }
 }
 
-/* Media Queries for Responsive Design */
-
-/* Desktop (default styles above) */
-
-/* Tablet Devices */
-@media screen and (max-width: 980px) {
-    body {
-        padding: 15px;
-    }
-    
-    h1 {
-        font-size: 2em;
-    }
-    
-    main {
-        padding: 20px;
-    }
-    
-    .profile-image {
-        max-width: 250px;
-    }
-}
-
-/* Mobile Devices */
-@media screen and (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-    
-    h1 {
-        font-size: 1.8em;
-    }
-    
-    h2, h3 {
-        font-size: 1.2em;
-    }
-    
-    main {
-        padding: 15px;
-    }
-    
-    .profile-image {
-        max-width: 200px;
-    }
-    
-    p {
-        font-size: 0.95em;
-    }
-}
-
 main {
-    width: 95%;
-    max-width: 1200px;
+    max-width: min(95%, 1200px);
     margin: 0 auto;
     background-color: #fff;
     border-radius: 10px;
@@ -275,6 +230,6 @@ main {
     margin-top: 2rem;
 }
 
-.background-info h3 {
+.heading-tertiary {
     margin-top: 1.5rem;
 }
