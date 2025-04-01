@@ -237,3 +237,34 @@ main {
 .heading-tertiary {
     margin-top: 1.5rem;
 }
+
+/* Project Overview Styles */
+.project-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.page-designs .page-design {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.page-designs .page-design h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.dynamic-features ul li {
+    margin-bottom: 1rem;
+}
+
+.dynamic-features ul ul {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
