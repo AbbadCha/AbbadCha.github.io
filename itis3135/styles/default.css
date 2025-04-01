@@ -255,7 +255,7 @@ main {
     border-radius: 4px;
 }
 
-.page-designs .page-design h4 {
+.heading-page-design {
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
