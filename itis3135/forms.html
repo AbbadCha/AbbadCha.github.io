@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Abbad Chamma Awesome Cat | ITIS3135 | Forms</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1 class="heading-primary">Abbad Chamma Awesome Cat | ITIS3135</h1>
+        <nav>
+            <a href="index.html">Home</a> ||
+            <a href="introduction.html">Introduction</a> ||
+            <a href="contract.html">Contract</a> ||
+            <a href="byo_intro.html">BYO Intro</a> ||
+            <a href="forms.html">Forms</a> ||
+            <a href="project_overview.html">Project Overview</a> ||
+            <a href="stuff/MY_CRAPPY_PAGE_😈.htm">Crappy Page</a> ||
+            <a href="website_evaluations.html">Website Evaluations</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="heading-secondary">Photography Session Booking</h2>
+
+        <form action="#" method="post" class="booking-form">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name" size="30">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com" size="30">
+            </div>
+
+            <!-- Session Type (Radio Buttons) -->
+            <div class="form-group">
+                <label>Session Type:</label>
+                <div class="radio-group">
+                    <input type="radio" id="portrait" name="session_type" value="portrait" required>
+                    <label for="portrait">Portrait</label>
+
+                    <input type="radio" id="wedding" name="session_type" value="wedding">
+                    <label for="wedding">Wedding</label>
+
+                    <input type="radio" id="event" name="session_type" value="event">
+                    <label for="event">Event</label>
+                </div>
+            </div>
+
+            <!-- Additional Services (Checkboxes) -->
+            <div class="form-group">
+                <label>Additional Services:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="prints" name="services" value="prints">
+                    <label for="prints">Printed Photos</label>
+
+                    <input type="checkbox" id="digital" name="services" value="digital">
+                    <label for="digital">Digital Copies</label>
+
+                    <input type="checkbox" id="album" name="services" value="album">
+                    <label for="album">Photo Album</label>
+                </div>
+            </div>
+
+            <!-- Preferred Time (Dropdown) -->
+            <div class="form-group">
+                <label for="time_slot">Preferred Time Slot:</label>
+                <select id="time_slot" name="time_slot" required>
+                    <option value="">Select a time slot</option>
+                    <option value="morning">Morning (9AM - 12PM)</option>
+                    <option value="afternoon">Afternoon (1PM - 4PM)</option>
+                    <option value="evening">Evening (5PM - 8PM)</option>
+                </select>
+            </div>
+
+            <!-- Form Buttons -->
+            <div class="form-buttons">
+                <button type="reset" class="reset-button">Reset Form</button>
+                <button type="submit" class="submit-button">Book Session</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/achamma/" target="_blank">Charlotte.edu</a> ||
+            <a href="https://github.com/AbbadCha" target="_blank">GitHub</a> ||
+            <a href="https://abbadcha.github.io/" target="_blank">GitHub.io</a> ||
+            <a href="https://abbadcha.github.io/itis3135/" target="_blank">ITIS 3135 GitHub Pages</a> ||
+            <a href="https://www.freecodecamp.org/abbadcha/" target="_blank">freeCodeCamp</a> ||
+            <a href="https://www.codecademy.com/profiles/abbadcha" target="_blank">Codecademy</a>
+        </nav>
+        <p>Page built by Abbad</p>
+        <a href="https://validator.w3.org/check?uri=referer" target="_blank">
+            <img src="images/button_validation_html5.png" alt="Validate HTML">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+            <img src="images/button_validation_css.png" alt="Validate CSS">
+        </a>
+    </footer>
+</body>
+</html>
