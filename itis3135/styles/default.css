@@ -7,8 +7,12 @@
     --link-color: #d35400;
 }
 
-* {
+html {
     box-sizing: border-box;
+}
+
+body, input, textarea, button {
+    box-sizing: inherit;
 }
 
 body {
