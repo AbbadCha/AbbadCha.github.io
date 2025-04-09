@@ -19,9 +19,36 @@ html {
     box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption {
+body, p, ul, ol, li, figure, figcaption {
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h4 {
+    margin-bottom: 1rem;
 }
 
 body {
@@ -92,11 +119,7 @@ main {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: inherit;
-}
+
 
 .cta-button {
     display: inline-block;
@@ -118,11 +141,7 @@ h1 {
     background-color: var(--light-bg);
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
+
 
 .feature-grid {
     display: grid;
@@ -166,10 +185,7 @@ footer {
     margin-bottom: 2rem;
 }
 
-h4 {
-    margin-bottom: 1rem;
-    color: inherit;
-}
+
 
 .footer-section ul {
     list-style: none;
@@ -294,11 +310,7 @@ h4 {
     margin-bottom: 1rem;
 }
 
-h3 {
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-    font-size: 1.5rem;
-}
+
 
 .info-card ul {
     list-style: none;
