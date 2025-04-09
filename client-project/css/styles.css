@@ -279,11 +279,12 @@ h4 {
 .form-group select,
 .form-group textarea {
     display: block;
-    max-width: 100%;
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
 .info-card {
@@ -375,12 +376,13 @@ h3 {
 }
 
 .team-member img {
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
     border: 2px solid var(--secondary-color);
+    box-sizing: content-box;
 }
 
 /* Projects Page */
@@ -434,11 +436,12 @@ h3 {
 .form-group input,
 .form-group textarea {
     display: block;
-    max-width: 100%;
+    width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
 .contact-info .info-item {
@@ -457,25 +460,15 @@ h3 {
         display: none;
     }
     
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-
+    .feature-grid,
+    .contact-content,
     .services,
-    .projects {
+    .projects,
+    .team-grid {
         grid-template-columns: 1fr;
     }
 
     .team-grid {
-        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
@@ -484,5 +477,9 @@ h3 {
     .projects,
     .contact-content {
         padding: 2rem 5%;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
