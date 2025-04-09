@@ -7,11 +7,12 @@ Purpose: Define styles for the entire website
 
 /* Global Styles */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
+    --primary-color: #1a1a1a;
+    --secondary-color: #d4af37;
+    --accent-color: #8b0000;
     --text-color: #333;
     --light-bg: #f8f9fa;
+    --border-radius: 8px;
 }
 
 * {
@@ -70,10 +71,11 @@ main {
 }
 
 .hero-section {
-    background-color: var(--primary-color);
+    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9));
     color: white;
     padding: 4rem 0;
     text-align: center;
+    position: relative;
 }
 
 .hero-image {
