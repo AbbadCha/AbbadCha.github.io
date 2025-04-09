@@ -35,6 +35,12 @@ h1 {
     margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
 h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -491,7 +497,5 @@ footer {
         padding: 2rem 5%;
     }
 
-    h1 {
-        font-size: 2rem;
-    }
+
 }
