@@ -166,8 +166,9 @@ footer {
     margin-bottom: 2rem;
 }
 
-.footer-section h4 {
+h4 {
     margin-bottom: 1rem;
+    color: inherit;
 }
 
 .footer-section ul {
