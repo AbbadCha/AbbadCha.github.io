@@ -1,64 +1,77 @@
-# Apex Consulting Website
+# ConsultPro Business Consulting Website
 
-A modern, responsive website for a business consulting firm.
+A modern, responsive business consulting website built with HTML5 and CSS3.
 
 ## Project Structure
 
 ```
 client-project/
 ├── css/
-│   └── styles.css      # Main stylesheet
-├── js/
-│   └── main.js         # JavaScript functionality
-├── images/             # Image assets
-├── index.html          # Home page
-├── services.html       # Services page
-├── about.html          # About page
-├── projects.html       # Projects portfolio
-└── contact.html        # Contact form
+│   └── styles.css      # Main stylesheet with comprehensive styling
+├── index.html          # Home page with hero section and features
+├── services.html       # Detailed service offerings with testimonials
+├── about.html          # Company information and values
+├── team.html          # Team member profiles and statistics
+└── contact.html       # Contact form and information
 ```
 
 ## Features
 
 - Responsive design that works on all devices
-- Modern, clean interface
-- Interactive elements and smooth transitions
-- Consistent navigation across all pages
-- Contact form for client inquiries
+- Modern, clean UI with consistent styling
+- Semantic HTML5 markup
+- CSS3 features including:
+  - Flexbox and Grid layouts
+  - CSS Variables (Custom Properties)
+  - Transitions and hover effects
+  - Box shadows and border radius
+  - Responsive typography
+
+## Navigation
+
+The website includes a consistent navigation bar across all pages with links to:
+- Home
+- Services
+- About
+- Team
+- Contact
+
+## Styling
+
+The website uses a professional color scheme:
+- Primary Color: #2c3e50 (Dark Blue)
+- Secondary Color: #3498db (Light Blue)
+- Text Color: #333 (Dark Gray)
+- Light Background: #f8f9fa
+- Footer Background: #1a252f
 
 ## Pages
 
-1. **Home (index.html)**
+1. **Home Page (index.html)**
    - Hero section with call-to-action
-   - Feature highlights with icons
+   - Feature highlights
    - Company overview
 
-2. **Services**
-   - Detailed service offerings
-   - Interactive service cards
+2. **Services Page (services.html)**
+   - Detailed service descriptions
+   - Service features
+   - Client testimonials
 
-3. **About Us**
-   - Company mission
+3. **Team Page (team.html)**
    - Team member profiles
+   - Professional experience
+   - Team statistics
 
-4. **Projects**
-   - Portfolio of past work
-   - Case studies
-
-5. **Contact**
+4. **Contact Page (contact.html)**
    - Contact form
    - Business information
-   - Location details
+   - Social media links
 
-## Technologies Used
+## Best Practices
 
-- HTML5
-- CSS3 (with CSS Grid and Flexbox)
-- JavaScript (ES6+)
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- Semantic HTML elements for better accessibility
+- Consistent class naming convention
+- Responsive images with proper alt text
+- Mobile-first approach
+- Cross-browser compatibility
+- Well-documented code with comments

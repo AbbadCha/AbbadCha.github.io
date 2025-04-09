@@ -1,81 +1,86 @@
 <!DOCTYPE html>
-<!-- 
-Index Page (Home)
-Author: [Your Name]
-Date: April 8, 2025
-Purpose: Main landing page for Apex Consulting website
--->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Consulting | Home</title>
+    <title>ConsultPro - Professional Business Consulting</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Apex Consulting</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header id="main-header" class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo" id="site-logo">ConsultPro</a>
+            <nav id="main-nav" class="primary-navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="team.html" class="nav-link">Our Team</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Main content area -->
-    <main>
-        <!-- Hero section with background image and call-to-action -->
-        <section class="hero">
-            <h1>Transform Your Business</h1>
-            <p>Strategic solutions for sustainable growth</p>
-            <a href="contact.html" class="cta-button">Get Started</a>
+    <main id="main-content">
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Transform Your Business with Expert Consulting</h1>
+                <p class="hero-subtitle">We help businesses grow, innovate, and succeed in today's competitive market</p>
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3" alt="Business meeting" class="hero-image">
+            </div>
         </section>
 
-        <!-- Features section highlighting our key services -->
-        <section class="features">
-            <h2>Why Choose Us</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <img src="images/analysis.jpg" alt="Expert Analysis Icon" class="feature-icon">
-                    <h3>Expert Analysis</h3>
-                    <p>Data-driven insights to guide your decisions</p>
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Us?</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3" alt="Expert Analysis" class="feature-image">
+                        <h3 class="feature-title">Expert Analysis</h3>
+                        <p class="feature-text">In-depth market analysis and strategic planning to drive your business forward.</p>
+                    </article>
+                    <article class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3" alt="Custom Solutions" class="feature-image">
+                        <h3 class="feature-title">Custom Solutions</h3>
+                        <p class="feature-text">Tailored consulting services designed to meet your specific business needs.</p>
+                    </article>
+                    <article class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3" alt="Proven Results" class="feature-image">
+                        <h3 class="feature-title">Proven Results</h3>
+                        <p class="feature-text">Track record of success with businesses across various industries.</p>
+                    </article>
                 </div>
-                <div class="feature-card">
-                    <img src="images/planning.jpg" alt="Strategic Planning Icon" class="feature-icon">
-                    <h3>Strategic Planning</h3>
-                    <p>Comprehensive roadmaps for success</p>
-                </div>
-                <div class="feature-card">
-                    <img src="images/innovation.jpg" alt="Innovation Icon" class="feature-icon">
-                    <h3>Innovation</h3>
-                    <p>Cutting-edge solutions for modern challenges</p>
-                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Ready to Transform Your Business?</h2>
+                <p class="cta-text">Schedule a free consultation with our experts today.</p>
+                <a href="contact.html" class="cta-button">Get Started</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Apex Consulting</h4>
-                <p>Transforming businesses through strategic innovation</p>
+    <footer id="site-footer" class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">ConsultPro</h3>
+                    <p>Your trusted partner in business success</p>
+                </div>
+                <div class="footer-contact">
+                    <p>Email: contact@consultpro.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Apex Consulting. All rights reserved.</p>
+            <p class="copyright">&copy; 2025 ConsultPro. All rights reserved.</p>
         </div>
     </footer>
 </body>
