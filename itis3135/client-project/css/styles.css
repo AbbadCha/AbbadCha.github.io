@@ -14,13 +14,23 @@ html {
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-
-body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+body {
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /* Global Variables */
@@ -237,11 +247,12 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
 
 .form-input {
     display: block;
-    padding: 0.8rem;
+    inline-size: 100%;
+    padding-block: 0.8rem;
+    padding-inline: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
-    width: 100%;
 }
 
 .calendar-widget {
@@ -320,8 +331,8 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
 }
 
 .post-image img {
-    width: 100%;
-    height: 300px;
+    inline-size: 100%;
+    block-size: 300px;
     object-fit: cover;
 }
 
@@ -489,7 +500,7 @@ body {
     background: var(--white);
     padding: 1rem 5%;
     position: fixed;
-    width: 100%;
+    inline-size: 100%;
     top: 0;
     z-index: 1000;
     display: flex;
@@ -533,12 +544,12 @@ body {
     justify-content: center;
     text-align: center;
     color: var(--white);
-    padding-top: 4rem;
+    margin-block-start: var(--header-height);
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 0 2rem;
+    max-inline-size: 800px;
+    padding-inline: 2rem;
 }
 
 .hero-title {
@@ -548,8 +559,8 @@ body {
 }
 
 .hero-title {
-    max-width: 800px;
-    padding: 0 2rem;
+    max-inline-size: 800px;
+    padding-inline: 2rem;
 }
 
 .cta-button {
@@ -592,8 +603,8 @@ body {
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 300px;
+    inline-size: 100%;
+    block-size: 300px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -706,7 +717,7 @@ footer {
 
     .nav-links {
         display: none;
-        width: 100%;
+        inline-size: 100%;
         position: absolute;
         top: 100%;
         left: 0;
