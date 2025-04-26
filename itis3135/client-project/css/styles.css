@@ -9,10 +9,65 @@ Organization:
 - Responsive Design: Media queries for different screen sizes
 */
 
-/* Global Styles - Define base styles and variables */
+/* CSS Reset */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Variables */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --spacing-unit: 1rem;
+    --container-padding: 5%;
+    --header-height: 80px;
+}
+
+/* Typography */
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--spacing-unit);
+    color: var(--primary-color);
+}
+
+.section-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: calc(var(--spacing-unit) * 0.8);
+    color: var(--primary-color);
+}
+
+.widget-title {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: calc(var(--spacing-unit) * 0.6);
+    color: var(--primary-color);
+}
+
+/* Layout */
+.container {
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+    padding: var(--container-padding);
+}
+
+.page-content {
+    margin-block-start: var(--header-height);
+}
+
 /* Portfolio Page Styles */
 .portfolio-page {
-    margin-top: 80px;
+    margin-block-start: var(--header-height);
 }
 
 .portfolio-header {
@@ -64,7 +119,7 @@ Organization:
 
 /* Services Page Styles */
 .services-page {
-    margin-top: 80px;
+    margin-block-start: var(--header-height);
 }
 
 .package-comparison {
@@ -86,9 +141,10 @@ Organization:
     transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
+    padding: var(--spacing-unit);
 }
 
-.package-column-highlight {
+.package-column--highlight {
     transform: scale(1.05);
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
@@ -123,14 +179,15 @@ Organization:
 }
 
 .select-package {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 1rem;
+    display: block;
+    padding: var(--spacing-unit);
     background: var(--secondary-color);
     color: var(--white);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
 }
 
 .select-package:hover {
@@ -149,7 +206,7 @@ Organization:
 
 /* Booking Page Styles */
 .booking-page {
-    margin-top: 80px;
+    margin-block-start: var(--header-height);
 }
 
 .booking-form-container {
@@ -178,15 +235,13 @@ Organization:
     color: var(--text-color);
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    box-sizing: border-box;
-    width: 100%;
+.form-input {
+    display: block;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    width: 100%;
 }
 
 .calendar-widget {
@@ -227,7 +282,7 @@ Organization:
 
 /* Blog Page Styles */
 .blog-page {
-    margin-top: 80px;
+    margin-block-start: var(--header-height);
     display: grid;
     grid-template-columns: 1fr 300px;
     column-gap: 2rem;
@@ -463,7 +518,7 @@ body {
 }
 
 .nav-links li a:hover,
-.nav-links li .nav-link-active {
+.nav-link-active {
     color: var(--secondary-color);
 }
 
@@ -487,8 +542,9 @@ body {
 }
 
 .hero-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--spacing-unit);
+    color: var(--primary-color);
 }
 
 .hero-title {
