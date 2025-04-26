@@ -32,6 +32,6 @@ filterButtons.forEach((button) => {
 });
 
 // Add animation classes for smooth transitions
-galleryItems.forEach(item => {
+galleryItems.forEach((item) => {
     item.classList.add('gallery-item-visible');
 });
