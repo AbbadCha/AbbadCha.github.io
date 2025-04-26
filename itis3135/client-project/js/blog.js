@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function performSearch() {
         const searchTerm = searchInput.value.toLowerCase();
         
-        blogPosts.forEach(post => {
+        blogPosts.forEach((post) => {
             const title = post.querySelector('h2').textContent.toLowerCase();
             const content = post.querySelector('p').textContent.toLowerCase();
             
@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Category filtering
     const categoryLinks = document.querySelectorAll('.categories-widget a');
     
-    categoryLinks.forEach(link => {
+    categoryLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const category = link.textContent.split(' ')[0].toLowerCase();
             
-            blogPosts.forEach(post => {
+            blogPosts.forEach((post) => {
                 const postCategory = post.querySelector('.category').textContent.toLowerCase();
                 if (category === postCategory || category === 'all') {
                     post.style.display = 'block';
