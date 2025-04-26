@@ -3,40 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Apex Consulting</title>
+    <title>Portfolio | ZC Photography</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Apex Consulting</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header id="main-header" class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo" id="site-logo">ZC Photography</a>
+            <nav id="main-nav" class="primary-navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="booking.html" class="nav-link">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Our Projects</h1>
-            <p>Success stories that drive results</p>
+    <main id="main-content">
+        <section id="portfolio-hero" class="hero-section">
+            <div class="container">
+                <h2 class="section-title">Portfolio Gallery</h2>
+                <p class="section-subtitle">Capturing moments that last forever</p>
+            </div>
         </section>
 
-        <section class="projects">
-            <div class="project-card">
-                <h3>Tech Innovation Hub</h3>
-                <p>Helped a tech startup optimize their operations and increase efficiency by 40%</p>
-                <span class="tag">Strategy</span>
+        <section id="portfolio" class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="images/wedding-1.jpg" alt="Elegant wedding photography" class="portfolio-image">
+                <h3 class="portfolio-title">Wedding Collection</h3>
+                <p class="portfolio-description">Beautiful moments from Sarah & John's wedding</p>
+                <span class="category-tag">Wedding</span>
             </div>
-            <div class="project-card">
-                <h3>Retail Transformation</h3>
-                <p>Led digital transformation for a major retail chain, resulting in 25% revenue growth</p>
-                <span class="tag">Digital</span>
+            <div class="portfolio-item">
+                <img src="images/portrait-1.jpg" alt="Professional portrait photography" class="portfolio-image">
+                <h3 class="portfolio-title">Portrait Series</h3>
+                <p class="portfolio-description">Professional headshots and personal portraits</p>
+                <span class="category-tag">Portrait</span>
             </div>
             <div class="project-card">
                 <h3>Healthcare Solutions</h3>
