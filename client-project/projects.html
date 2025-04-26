@@ -1,7 +1,7 @@
 <!--
-  projects.html - Projects page for Zain Chamma's Website
+  projects.html - ZC Photography Portfolio Home/Projects Page
   Author: Abbad Chamma
-  Description: Projects by Zain Chamma. Consistent layout and navigation.
+  Description: Redesigned to match wireframe for Zain Chamma's photography business. Includes logo, header, nav, book now, featured work, and three-column layout. All images are from Unsplash and are royalty-free.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -12,40 +12,56 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header id="main-header">
-        <div class="container header-flex">
-            <h1 id="site-title">Zain Chamma</h1>
-            <nav id="main-nav" class="navbar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Header area with logo and title -->
+    <header id="main-header" class="projects-header">
+        <div class="header-row">
+            <!-- Logo: use Unsplash icon as placeholder -->
+            <div class="logo-box">
+                <img src="https://img.icons8.com/ios-filled/100/000000/camera.png" alt="ZC Photography Logo" class="logo-img">
+            </div>
+            <div class="header-title-box">
+                <h1 id="site-title">ZC Photography</h1>
+            </div>
         </div>
+        <!-- Navigation bar matching wireframe -->
+        <nav id="main-nav" class="navbar wireframe-navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Booking</a></li>
+            </ul>
+        </nav>
     </header>
     <main id="projects-main">
-        <section class="projects-section">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <!-- Project 1 image -->
-                <img src="images/zain-project1.jpg" alt="Zain Chamma working on a robotics project" class="project-img">
-                <div class="project-info">
-                    <h3>Sample Project 1</h3>
-                    <p>Description of Zain's first project. More details coming soon!</p>
+        <div class="wireframe-row wireframe-actions">
+            <button class="book-now-btn">Book Now</button>
+            <div class="life-moments-box">Capturing Life's Moments</div>
+        </div>
+        <!-- Main three-column layout -->
+        <div class="wireframe-row wireframe-columns">
+            <!-- Left: Featured Work -->
+            <aside class="featured-work-col">
+                <div class="featured-work-main">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Featured wedding photo" class="featured-img">
+                    <div class="featured-caption">Featured Work</div>
                 </div>
-            </div>
-            <div class="project-card">
-                <!-- Project 2 image -->
-                <img src="images/zain-project2.jpg" alt="Zain Chamma presenting at a science fair" class="project-img">
-                <div class="project-info">
-                    <h3>Sample Project 2</h3>
-                    <p>Description of Zain's second project. More details coming soon!</p>
+                <div class="featured-thumbs">
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=100&q=80" alt="Featured portrait" class="featured-thumb">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=100&q=80" alt="Featured event" class="featured-thumb">
                 </div>
-            </div>
-        </section>
+            </aside>
+            <!-- Center: Large callout or image -->
+            <section class="center-col">
+                <img src="https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&w=350&q=80" alt="Central showcase" class="center-img">
+            </section>
+            <!-- Right: Wedding/Portrait/Events -->
+            <aside class="right-col">
+                <div class="right-box">
+                    <div class="right-title">Wedding<br>Portrait<br>Events</div>
+                </div>
+            </aside>
+        </div>
     </main>
     <footer id="main-footer">
         <div class="container">
