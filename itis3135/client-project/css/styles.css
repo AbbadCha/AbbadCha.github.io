@@ -60,12 +60,14 @@ body {
 
 .grid {
     display: grid;
-    gap: var(--space-md);
+    row-gap: var(--space-md);
+    column-gap: var(--space-md);
 }
 
 .flex {
     display: flex;
-    gap: var(--space-md);
+    row-gap: var(--space-md);
+    column-gap: var(--space-md);
 }
 
 /* Components */
@@ -169,8 +171,9 @@ body {
 
 .portfolio__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: var(--space-lg);
+    column-gap: var(--space-lg);
 }
 
 .portfolio__item {
@@ -193,8 +196,9 @@ body {
 
 .services__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    row-gap: var(--space-lg);
+    column-gap: var(--space-lg);
 }
 
 /* Blog */
@@ -204,14 +208,16 @@ body {
 
 .blog__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    row-gap: var(--space-lg);
+    column-gap: var(--space-lg);
 }
 
 /* Forms */
 .form {
     display: grid;
-    gap: var(--space-md);
+    row-gap: var(--space-md);
+    column-gap: var(--space-md);
 }
 
 .form__group {
