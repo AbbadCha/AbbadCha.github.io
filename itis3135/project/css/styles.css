@@ -7,9 +7,36 @@
     --header-height: 80px;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption {
+/* Reset */
+body, p, ul, ol, li, figure, figcaption {
     margin: 0;
     padding: 0;
+}
+
+/* Typography */
+.page-title,
+.section-title,
+.subsection-title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color);
+}
+
+.page-title {
+    font-size: 3rem;
+    margin-block-end: 1rem;
+    color: #fff;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-block-end: 1.5rem;
+}
+
+.subsection-title {
+    font-size: 1.5rem;
+    margin-block-end: 1rem;
 }
 
 html {
@@ -99,7 +126,7 @@ main {
     padding: 2rem;
 }
 
-.page-title {
+.hero h1 {
     font-size: 3rem;
     margin-block-end: 1rem;
 }
