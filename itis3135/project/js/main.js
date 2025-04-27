@@ -77,7 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
             dateFormat: 'Y-m-d',
             altInput: true,
             altFormat: 'F j, Y',
-            disableMobile: false
+            disableMobile: true, // Force the native datepicker to be disabled on mobile
+            enableTime: false,
+            allowInput: true, // Allow manual input
+            parseDate: (datestr, format) => {
+                return new Date(datestr);
+            },
+            errorHandler: (error) => {
+                console.warn('Flatpickr: ', error);
+            }
         });
     }
 
