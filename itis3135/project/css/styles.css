@@ -1,13 +1,19 @@
 /* Reset and Base Styles */
 :root {
-    --primary-color: #007bff;
-    --primary-dark: #0056b3;
-    --text-color: #333;
+    --primary-color: #0056b3;
+    --primary-dark: #003d7a;
+    --text-color: #333333;
     --background-light: #f8f9fa;
-    --white: #fff;
+    --white: #ffffff;
+    --gray: #666666;
+    --light-border: #dddddd;
 }
 
-* {
+/* Replace universal selector with specific reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
+pre, a, code, img, small, strong, sub, sup, b, u, i, ol, ul, li,
+fieldset, form, label, article, aside, figure, figcaption, footer, 
+header, menu, nav, section {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,8 +23,9 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    overflow-x: hidden;
-    padding-top: 80px; /* Account for fixed header */
+    background-color: var(--white);
+    min-height: 100vh;
+    padding-top: 80px;
 }
 
 /* Accessibility */

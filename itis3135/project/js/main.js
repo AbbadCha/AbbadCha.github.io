@@ -1,61 +1,67 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Form validation
-    const bookingForm = document.getElementById('bookingForm');
-    if (bookingForm) {
-        bookingForm.addEventListener('submit', (event) => {
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+    initializeForm();
+    initializeFilters();
+    initializeMobileMenu();
+});
+
+// Form handling
+function initializeForm() {
+    var form = document.getElementById('bookingForm');
+    if (form) {
+        form.addEventListener('submit', function(event) {
             event.preventDefault();
             alert('Thank you for your booking request! We will contact you soon.');
-            bookingForm.reset();
+            form.reset();
         });
     }
+}
 
-    // Portfolio filters
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach((button) => {
-        button.addEventListener('click', function() {
-            const category = this.dataset.category;
-            
-            // Remove active class from all buttons
-            filterButtons.forEach((btn) => {
-                btn.classList.remove('active');
-            });
-            
-            // Add active class to clicked button
-            this.classList.add('active');
-
-            // Filter gallery items
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            galleryItems.forEach((item) => {
-                if (category === 'all' || item.dataset.category === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
+// Portfolio filters
+function initializeFilters() {
+    var filters = document.querySelectorAll('.filter-btn');
+    if (filters.length) {
+        filters.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var category = this.getAttribute('data-category');
+                updateFilters(filters, category);
+                filterGallery(category);
             });
         });
-    });
+    }
+}
 
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.querySelector('.nav-links');
+function updateFilters(filters, activeCategory) {
+    filters.forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-category') === activeCategory) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+function filterGallery(category) {
+    var items = document.querySelectorAll('.gallery-item');
+    items.forEach(function(item) {
+        var itemCategory = item.getAttribute('data-category');
+        item.style.display = 
+            category === 'all' || category === itemCategory ? 'block' : 'none';
+    });
+}
+
+// Mobile menu
+function initializeMobileMenu() {
+    var menuButton = document.getElementById('menuToggle');
+    var nav = document.querySelector('.nav-list');
     
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-            menuToggle.setAttribute('aria-expanded', 
-                navLinks.classList.contains('show').toString()
-            );
+    if (menuButton && nav) {
+        menuButton.addEventListener('click', function() {
+            nav.classList.toggle('show');
+            var isExpanded = nav.classList.contains('show');
+            menuButton.setAttribute('aria-expanded', isExpanded);
         });
     }
-
-    // Form input validation
-    const formInputs = document.querySelectorAll('input, select, textarea');
-    formInputs.forEach((input) => {
-        input.addEventListener('blur', () => {
-            validateInput(input);
-        });
-    });
-});
+}
 
 // Input validation function
 function validateInput(input) {
