@@ -200,6 +200,41 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.blog-post {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content .date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-block-end: 1rem;
+}
+
+.blog-content p {
+    margin-block-end: 1.5rem;
+}
+
 /* Contact Form */
 .contact-form {
     max-inline-size: 600px;
