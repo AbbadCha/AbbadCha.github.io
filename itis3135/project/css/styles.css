@@ -1,9 +1,9 @@
 /* Reset and Base Styles */
 :root {
-    --primary-color: #0056b3;
-    --primary-dark: #003d7a;
-    --text-color: #333333;
-    --background-light: #f8f9fa;
+    --primary: #0056b3;
+    --dark: #003d7a;
+    --text: #ffffff;
+    --bg-light: #1a1a1a;
     --white: #ffffff;
     --gray: #666666;
     --light-border: #dddddd;
@@ -20,12 +20,12 @@ header, menu, nav, section {
 }
 
 body {
+    margin: 0;
+    padding: 80px 0 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--white);
-    min-height: 100vh;
-    padding-top: 80px;
+    color: var(--text);
+    background: #000000;
 }
 
 /* Accessibility */
@@ -42,8 +42,8 @@ body {
 
 /* Header and Navigation */
 header {
-    background-color: var(--white);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #000000;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -68,7 +68,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text);
     font-weight: 500;
     transition: color 0.3s ease;
     padding: 0.5rem;
@@ -77,7 +77,7 @@ header {
 .nav-links a:hover,
 .nav-links a:focus,
 .nav-links a.active {
-    color: var(--primary-color);
+    color: var(--primary);
     outline: none;
     text-decoration: underline;
 }
@@ -101,7 +101,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background-color: var(--background-light);
+    background-color: var(--bg-light);
     padding: 4rem 2rem;
     text-align: center;
 }
@@ -147,7 +147,7 @@ header {
 /* Services Section */
 .services-preview {
     padding: 4rem 2rem;
-    background-color: var(--background-light);
+    background-color: var(--bg-light);
 }
 
 .services-grid {
@@ -167,7 +167,7 @@ header {
 
 /* Footer */
 footer {
-    background-color: var(--text-color);
+    background-color: var(--text);
     color: var(--white);
     padding: 3rem 2rem 1rem;
 }
