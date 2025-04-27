@@ -69,6 +69,19 @@ function filterGallery(category) {
 
 // Initialize portfolio filters
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize date picker
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+        flatpickr(dateInput, {
+            minDate: 'today',
+            dateFormat: 'Y-m-d',
+            altInput: true,
+            altFormat: 'F j, Y',
+            disableMobile: false
+        });
+    }
+
+
     const filterButtons = document.querySelectorAll('.filter-btn');
     if (!filterButtons.length) return;
 
