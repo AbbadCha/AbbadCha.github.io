@@ -7,10 +7,17 @@
     --header-height: 80px;
 }
 
-* {
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption {
     margin: 0;
     padding: 0;
+}
+
+html {
     box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 html {
@@ -28,14 +35,14 @@ header {
     background-color: var(--primary-color);
     color: #fff;
     position: fixed;
-    width: 100%;
+    inset-inline: 0;
     top: 0;
     z-index: 1000;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding-inline: 2rem;
 }
 
 .logo {
@@ -128,6 +135,7 @@ main {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1;
+    box-sizing: border-box;
 }
 
 .gallery-item img {
@@ -179,10 +187,12 @@ main {
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
+    display: block;
+    inline-size: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 /* Footer */
