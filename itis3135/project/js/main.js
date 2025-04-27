@@ -1,98 +1,78 @@
-// Wait for DOM to load
-document.addEventListener('DOMContentLoaded', function() {
-    initializeForm();
-    initializeFilters();
-    initializeMobileMenu();
-});
+// Main JavaScript file
+"use strict";
 
-// Form handling
-function initializeForm() {
-    var form = document.getElementById('bookingForm');
-    if (form) {
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Thank you for your booking request! We will contact you soon.');
-            form.reset();
-        });
-    }
+// Initialize all functions after DOM loads
+function initializePage() {
+    setupForm();
+    setupGallery();
+    setupMobileMenu();
 }
 
-// Portfolio filters
-function initializeFilters() {
-    var filters = document.querySelectorAll('.filter-btn');
-    if (filters.length) {
-        filters.forEach(function(button) {
-            button.addEventListener('click', function() {
-                var category = this.getAttribute('data-category');
-                updateFilters(filters, category);
-                filterGallery(category);
-            });
-        });
-    }
-}
-
-function updateFilters(filters, activeCategory) {
-    filters.forEach(function(btn) {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-category') === activeCategory) {
-            btn.classList.add('active');
-        }
-    });
-}
-
-function filterGallery(category) {
-    var items = document.querySelectorAll('.gallery-item');
-    items.forEach(function(item) {
-        var itemCategory = item.getAttribute('data-category');
-        item.style.display = 
-            category === 'all' || category === itemCategory ? 'block' : 'none';
-    });
-}
-
-// Mobile menu
-function initializeMobileMenu() {
-    var menuButton = document.getElementById('menuToggle');
-    var nav = document.querySelector('.nav-list');
+// Form setup and validation
+function setupForm() {
+    var bookingForm = document.getElementById("bookingForm");
     
-    if (menuButton && nav) {
-        menuButton.addEventListener('click', function() {
-            nav.classList.toggle('show');
-            var isExpanded = nav.classList.contains('show');
-            menuButton.setAttribute('aria-expanded', isExpanded);
-        });
+    if (bookingForm) {
+        bookingForm.onsubmit = function(event) {
+            event.preventDefault();
+            handleFormSubmit(bookingForm);
+        };
     }
 }
 
-// Input validation function
-function validateInput(input) {
-    const isValid = input.checkValidity();
-    if (!isValid) {
-        input.classList.add('invalid');
-        const errorMessage = input.validationMessage;
-        showError(input, errorMessage);
-    } else {
-        input.classList.remove('invalid');
-        clearError(input);
+// Handle form submission
+function handleFormSubmit(form) {
+    var formData = new FormData(form);
+    var message = "Thank you for your booking request!";
+    alert(message);
+    form.reset();
+}
+
+// Gallery filtering
+function setupGallery() {
+    var filterButtons = document.getElementsByClassName("filter-button");
+    
+    for (var i = 0; i < filterButtons.length; i++) {
+        filterButtons[i].onclick = function() {
+            var category = this.getAttribute("data-category");
+            handleFilter(category, filterButtons);
+        };
     }
 }
 
-// Show error message
-function showError(input, message) {
-    const errorDiv = input.nextElementSibling;
-    if (errorDiv && errorDiv.classList.contains('error-message')) {
-        errorDiv.textContent = message;
-    } else {
-        const newErrorDiv = document.createElement('div');
-        newErrorDiv.className = 'error-message';
-        newErrorDiv.textContent = message;
-        input.parentNode.insertBefore(newErrorDiv, input.nextSibling);
+// Handle gallery filtering
+function handleFilter(category, buttons) {
+    // Update active button
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+        if (buttons[i].getAttribute("data-category") === category) {
+            buttons[i].classList.add("active");
+        }
+    }
+    
+    // Filter gallery items
+    var items = document.getElementsByClassName("gallery-item");
+    for (var j = 0; j < items.length; j++) {
+        var item = items[j];
+        if (category === "all" || item.getAttribute("data-category") === category) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
     }
 }
 
-// Clear error message
-function clearError(input) {
-    const errorDiv = input.nextElementSibling;
-    if (errorDiv && errorDiv.classList.contains('error-message')) {
-        errorDiv.remove();
+// Mobile menu setup
+function setupMobileMenu() {
+    var menuButton = document.getElementById("menuToggle");
+    var menu = document.getElementById("navList");
+    
+    if (menuButton && menu) {
+        menuButton.onclick = function() {
+            menu.classList.toggle("show");
+        };
     }
-} 
+}
+
+// Add event listener for DOM content loaded
+document.addEventListener("DOMContentLoaded", initializePage); 
