@@ -112,7 +112,7 @@ main {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgb(0 0 0 / 50%);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
