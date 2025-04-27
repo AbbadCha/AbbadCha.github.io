@@ -1,39 +1,56 @@
-/*
-ZC Photography Portfolio Styles
-Author: Abbad Chaudhary
-*/
+/* Reset */
+html {
+    box-sizing: border-box;
+}
 
-:root {
-    /* Colors */
-    --color-primary: #2c3e50;
-    --color-secondary: #e74c3c;
-    --color-text: #333;
-    --color-bg-light: #f5f5f5;
-    --color-white: #ffffff;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
 
-    /* Spacing */
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 4rem;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
-    /* Layout */
-    --header-height: 5rem;
-    --container-max-width: 75rem;
-    --container-padding: clamp(1rem, 5vw, 3rem);
+/* Typography */
+h1, .h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2, .h2 { font-size: 2rem; margin-bottom: 0.75rem; }
+h3, .h3 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+p { margin: 0 0 1rem; }
 
-    /* Typography */
-    --font-size-base: 1rem;
-    --font-size-lg: 1.25rem;
-    --font-size-xl: 1.5rem;
-    --font-size-2xl: 2rem;
-    --font-size-3xl: 3rem;
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    /* Border Radius */
-    --radius-sm: 0.25rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 1rem;
+.portfolio {
+    padding: 4rem 2rem;
+}
+
+.portfolio-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+}
+
+@media (min-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Base Styles */
@@ -77,19 +94,25 @@ body {
 
 /* Components */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-sm) var(--space-lg);
-    border: none;
-    border-radius: var(--radius-md);
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-size: var(--font-size-base);
-    line-height: 1.5;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #2c3e50;
+    color: #fff;
     text-decoration: none;
+    border-radius: 4px;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background: #34495e;
+}
+
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .btn:hover {
@@ -111,14 +134,38 @@ body {
     padding: var(--space-md);
 }
 
-/* Navigation */
-.nav {
+/* Header */
+.header {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: fixed;
-    inset-block-start: 0;
-    inset-inline: 0;
-    background-color: var(--color-white);
-    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
-    z-index: 100;
+    width: 100%;
+    top: 0;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
 }
 
 .nav__container {
@@ -152,43 +199,31 @@ body {
     margin-block-start: var(--header-height);
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-    position: relative;
-    min-block-size: calc(100vh - var(--header-height));
-    display: grid;
-    place-items: center;
     text-align: center;
-    padding-block: var(--space-xl);
-    background-color: var(--color-bg-light);
+    padding: 6rem 2rem 4rem;
+    background: #f5f5f5;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
 }
 
 .hero__content {
     max-inline-size: 40rem;
     margin-inline: auto;
-    padding-inline: var(--space-md);
-}
-
-/* Portfolio */
-.portfolio {
-    padding-block: var(--space-xl);
-}
-
-.portfolio__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-@media (min-width: 40rem) {
-    .portfolio__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 60rem) {
-    .portfolio__grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 .portfolio__grid > * {
