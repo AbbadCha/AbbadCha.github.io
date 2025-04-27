@@ -8,11 +8,19 @@ function validateForm() {
     const form = document.getElementById('booking-form');
     if (!form) return true;
 
-    const name = document.getElementById('name')?.value;
-    const email = document.getElementById('email')?.value;
-    const phone = document.getElementById('phone')?.value;
-    const service = document.getElementById('service')?.value;
-    const date = document.getElementById('date')?.value;
+    const nameEl = document.getElementById('name');
+    const emailEl = document.getElementById('email');
+    const phoneEl = document.getElementById('phone');
+    const serviceEl = document.getElementById('service');
+    const dateEl = document.getElementById('date');
+
+    if (!nameEl || !emailEl || !phoneEl || !serviceEl || !dateEl) return true;
+
+    const name = nameEl.value;
+    const email = emailEl.value;
+    const phone = phoneEl.value;
+    const service = serviceEl.value;
+    const date = dateEl.value;
 
     // Basic validation
     if (!name || !email || !phone || !service || !date) {

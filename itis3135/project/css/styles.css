@@ -216,7 +216,8 @@ main {
 }
 
 .blog-post img {
-    inline-size: 100%;
+    width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
@@ -228,11 +229,11 @@ main {
 .blog-content .date {
     color: #666;
     font-size: 0.9rem;
-    margin-block-end: 1rem;
+    margin-bottom: 1rem;
 }
 
 .blog-content p {
-    margin-block-end: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Contact Form */
