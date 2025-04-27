@@ -8,7 +8,18 @@
 }
 
 /* Reset */
-body, p, ul, ol, li, figure, figcaption {
+/* Reset margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+ul,
+ol,
+li,
+figure,
+figcaption {
     margin: 0;
     padding: 0;
 }
