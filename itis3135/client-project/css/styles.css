@@ -62,7 +62,7 @@ body {
     display: grid;
 }
 
-.grid > * + * {
+.grid > .grid__item:not(:first-child) {
     margin-block-start: var(--space-md);
     margin-inline-start: var(--space-md);
 }
@@ -71,7 +71,7 @@ body {
     display: flex;
 }
 
-.flex > * + * {
+.flex > .flex__item:not(:first-child) {
     margin-inline-start: var(--space-md);
 }
 
@@ -837,9 +837,9 @@ body {
     }
 }
 
-.gallery-grid > * + * {
-    margin-top: 2rem;
-    margin-left: 2rem;
+.gallery-grid > .gallery-item:not(:first-child) {
+    margin-block-start: 2rem;
+    margin-inline-start: 2rem;
 }
 
 .gallery-item {
