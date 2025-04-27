@@ -40,12 +40,11 @@ body, p, ul, ol, li, figure, figcaption {
 }
 
 html {
-    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
+[class] {
+    box-sizing: border-box;
 }
 
 body {
@@ -187,7 +186,7 @@ main {
     background: #fff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Form */
@@ -239,7 +238,7 @@ footer {
         gap: 1rem;
     }
 
-    .hero h1 {
+    .page-title {
         font-size: 2rem;
     }
 }
