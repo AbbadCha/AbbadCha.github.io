@@ -1,78 +1,90 @@
-// Main JavaScript file
-"use strict";
+'use strict';
 
-// Initialize all functions after DOM loads
-function initializePage() {
-    setupForm();
-    setupGallery();
-    setupMobileMenu();
-}
+/**
+ * Validates the booking form
+ * @returns {boolean} True if form is valid, false otherwise
+ */
+function validateForm() {
+    const form = document.getElementById('booking-form');
+    if (!form) return true;
 
-// Form setup and validation
-function setupForm() {
-    var bookingForm = document.getElementById("bookingForm");
-    
-    if (bookingForm) {
-        bookingForm.onsubmit = function(event) {
-            event.preventDefault();
-            handleFormSubmit(bookingForm);
-        };
+    const name = document.getElementById('name')?.value;
+    const email = document.getElementById('email')?.value;
+    const phone = document.getElementById('phone')?.value;
+    const service = document.getElementById('service')?.value;
+    const date = document.getElementById('date')?.value;
+
+    // Basic validation
+    if (!name || !email || !phone || !service || !date) {
+        window.alert('Please fill in all required fields');
+        return false;
     }
-}
 
-// Handle form submission
-function handleFormSubmit(form) {
-    var formData = new FormData(form);
-    var message = "Thank you for your booking request!";
-    alert(message);
-    form.reset();
-}
-
-// Gallery filtering
-function setupGallery() {
-    var filterButtons = document.getElementsByClassName("filter-button");
-    
-    for (var i = 0; i < filterButtons.length; i++) {
-        filterButtons[i].onclick = function() {
-            var category = this.getAttribute("data-category");
-            handleFilter(category, filterButtons);
-        };
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        window.alert('Please enter a valid email address');
+        return false;
     }
+
+    // Phone validation
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
+        window.alert('Please enter a valid 10-digit phone number');
+        return false;
+    }
+
+    // Date validation
+    const selectedDate = new Date(date);
+    const today = new Date();
+    if (selectedDate < today) {
+        window.alert('Please select a future date');
+        return false;
+    }
+
+    return true;
 }
 
-// Handle gallery filtering
-function handleFilter(category, buttons) {
-    // Update active button
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("active");
-        if (buttons[i].getAttribute("data-category") === category) {
-            buttons[i].classList.add("active");
+/**
+ * Filters gallery items based on category
+ * @param {string} category - The category to filter by
+ */
+function filterGallery(category) {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    if (!galleryItems.length) return;
+
+    galleryItems.forEach((item) => {
+        const display = category === 'all' || item.dataset.category === category ? 'block' : 'none';
+        item.style.display = display;
+    });
+}
+
+// Initialize portfolio filters
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    if (!filterButtons.length) return;
+
+    filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            filterGallery(button.dataset.category);
+        });
+    });
+});
+
+// Initialize smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetId = anchor.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
         }
-    }
-    
-    // Filter gallery items
-    var items = document.getElementsByClassName("gallery-item");
-    for (var j = 0; j < items.length; j++) {
-        var item = items[j];
-        if (category === "all" || item.getAttribute("data-category") === category) {
-            item.style.display = "block";
-        } else {
-            item.style.display = "none";
-        }
-    }
-}
-
-// Mobile menu setup
-function setupMobileMenu() {
-    var menuButton = document.getElementById("menuToggle");
-    var menu = document.getElementById("navList");
-    
-    if (menuButton && menu) {
-        menuButton.onclick = function() {
-            menu.classList.toggle("show");
-        };
-    }
-}
-
-// Add event listener for DOM content loaded
-document.addEventListener("DOMContentLoaded", initializePage); 
+    });
+});

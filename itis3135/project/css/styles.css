@@ -1,208 +1,213 @@
-/* Reset and Base Styles */
+/* Global Styles */
 :root {
-    --primary: #0056b3;
-    --dark: #003d7a;
-    --text: #ffffff;
-    --bg-light: #1a1a1a;
-    --white: #ffffff;
-    --gray: #666666;
-    --light-border: #dddddd;
+    --primary-color: #2c3e50;
+    --secondary-color: #e67e22;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --header-height: 80px;
 }
 
-/* Replace universal selector with specific reset */
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
-pre, a, code, img, small, strong, sub, sup, b, u, i, ol, ul, li,
-fieldset, form, label, article, aside, figure, figcaption, footer, 
-header, menu, nav, section {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    padding: 80px 0 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: var(--text);
-    background: #000000;
+    color: var(--text-color);
 }
 
-/* Accessibility */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-/* Header and Navigation */
+/* Header & Navigation */
 header {
-    background: #000000;
-    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+    background-color: var(--primary-color);
+    color: #fff;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-}
-
-.main-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
 }
 
-.nav-links {
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav {
     display: flex;
-    list-style: none;
     gap: 2rem;
-    flex-wrap: wrap;
 }
 
-.nav-links a {
+nav a {
+    color: #fff;
     text-decoration: none;
-    color: var(--text);
-    font-weight: 500;
     transition: color 0.3s ease;
-    padding: 0.5rem;
 }
 
-.nav-links a:hover,
-.nav-links a:focus,
-.nav-links a.active {
-    color: var(--primary);
-    outline: none;
-    text-decoration: underline;
+nav a:hover {
+    color: var(--secondary-color);
 }
 
-/* Course Navigation Styles */
-.course-info {
-    text-align: center;
-    margin-top: 1rem;
+/* Main Content */
+main {
+    margin-block-start: var(--header-height);
+    min-height: calc(100vh - var(--header-height) - 100px);
 }
 
-.course-info a {
-    color: var(--white);
-    text-decoration: none;
-    margin: 0 0.5rem;
-}
-
-.course-info a:hover,
-.course-info a:focus {
-    text-decoration: underline;
-}
-
-/* Hero Section */
 .hero {
-    background-color: var(--bg-light);
-    padding: 4rem 2rem;
+    height: calc(100vh - var(--header-height));
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 50%);
 }
 
 .hero-content {
+    position: relative;
+    z-index: 1;
     max-width: 800px;
-    margin: 0 auto;
+    padding: 2rem;
 }
 
-.hero-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.hero h1 {
+    font-size: 3rem;
+    margin-block-end: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-block-end: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d35400;
 }
 
 /* Gallery Grid */
-.gallery-grid {
+.gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 /* Services Section */
-.services-preview {
+.services {
     padding: 4rem 2rem;
-    background-color: var(--bg-light);
+    background-color: var(--light-bg);
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-block-start: 2rem;
 }
 
 .service-card {
-    background-color: var(--white);
+    background: #fff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.form-group {
+    margin-block-end: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-block-end: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 /* Footer */
 footer {
-    background-color: var(--text);
-    color: var(--white);
-    padding: 3rem 2rem 1rem;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-}
-
-.footer-content a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-.footer-content a:hover,
-.footer-content a:focus {
-    text-decoration: underline;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-    .main-nav {
+@media (max-width: 768px) {
+    header {
         flex-direction: column;
+        height: auto;
         padding: 1rem;
     }
 
-    .nav-links {
-        margin-top: 1rem;
-        justify-content: center;
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 
-    .hero-content h2 {
+    .hero h1 {
         font-size: 2rem;
     }
-} 
+}
