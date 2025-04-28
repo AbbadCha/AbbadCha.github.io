@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow | ITIS 3135 | Abbad Chamma</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/slideshow.js" defer></script>
+    <style>
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .slide {
+            display: none;
+            text-align: center;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slide img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .caption {
+            margin: 15px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.8);
+            text-decoration: none;
+        }
+
+        .next {
+            right: 20px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        .ai-prompts {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .ai-prompts h3 {
+            margin-bottom: 15px;
+        }
+
+        .ai-prompts ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .ai-prompts li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .ai-prompts li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ITIS 3135 | Abbad Chamma</h1>
+    </header>
+    
+    <main>
+        <h2>Name Slideshow</h2>
+        <p class="tagline">A visual journey through the letters of my name</p>
+
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="images/slideshow/apple.jpg" alt="A for Apple">
+                <div class="caption">A - for Apple (first letter in Abbad)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/banana.jpg" alt="B for Banana">
+                <div class="caption">B - for Banana (second letter in Abbad)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/balloon.jpg" alt="B for Balloon">
+                <div class="caption">B - for Balloon (third letter in Abbad)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/acorn.jpg" alt="A for Acorn">
+                <div class="caption">A - for Acorn (fourth letter in Abbad)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/dolphin.jpg" alt="D for Dolphin">
+                <div class="caption">D - for Dolphin (fifth letter in Abbad)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/cat.jpg" alt="C for Cat">
+                <div class="caption">C - for Cat (first letter in Chamma)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/house.jpg" alt="H for House">
+                <div class="caption">H - for House (second letter in Chamma)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/airplane.jpg" alt="A for Airplane">
+                <div class="caption">A - for Airplane (third letter in Chamma)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/moon.jpg" alt="M for Moon">
+                <div class="caption">M - for Moon (fourth letter in Chamma)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/mountain.jpg" alt="M for Mountain">
+                <div class="caption">M - for Mountain (fifth letter in Chamma)</div>
+            </div>
+            <div class="slide">
+                <img src="images/slideshow/anchor.jpg" alt="A for Anchor">
+                <div class="caption">A - for Anchor (sixth letter in Chamma)</div>
+            </div>
+
+            <a class="prev" onclick="changeSlide(-1)">❮</a>
+            <a class="next" onclick="changeSlide(1)">❯</a>
+
+            <div class="thumbnail-container">
+                <!-- Thumbnails will be added by JavaScript -->
+            </div>
+        </div>
+
+        <div class="ai-prompts">
+            <h3>AI Image Generation Prompts (Using DALL-E)</h3>
+            <ul>
+                <li>A bright red apple on a white background, photorealistic style</li>
+                <li>A bunch of ripe yellow bananas, studio lighting</li>
+                <li>A colorful hot air balloon against a blue sky</li>
+                <li>A single acorn on autumn leaves</li>
+                <li>A playful dolphin jumping out of clear blue water</li>
+                <li>A cute tabby cat sitting, looking at camera</li>
+                <li>A modern suburban house with a garden</li>
+                <li>A commercial airplane flying through clouds</li>
+                <li>A full moon in a clear night sky</li>
+                <li>A majestic mountain peak at sunrise</li>
+                <li>A vintage nautical anchor on wooden deck</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="introduction.html">Introduction</a> |
+            <a href="contract.html">Contract</a> |
+            <a href="tables.html">Tables</a> |
+            <a href="forms.html">Forms</a> |
+            <a href="website_evaluations.html">Website Evaluations</a> |
+            <a href="stuff/CRAPPY%20webpage.htm">Bad Design</a>
+        </nav>
+        <br>
+        <p>Page built by Abbad</p>
+        <a href="https://validator.w3.org/check?uri=referer">
+            <img src="images/button-valid-html5.gif" width="88" height="31" alt="Link to HTML validator">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="images/button-valid-css.gif" width="88" height="31" alt="Link to CSS validator">
+        </a>
+    </footer>
+</body>
+</html>
