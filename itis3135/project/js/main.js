@@ -62,7 +62,8 @@ function filterGallery(category) {
     if (!galleryItems.length) return;
 
     galleryItems.forEach((item) => {
-        const display = category === 'all' || item.dataset.category === category ? 'block' : 'none';
+        const categories = item.dataset.category.split(' ');
+        const display = category === 'all' || categories.includes(category) ? 'block' : 'none';
         item.style.display = display;
     });
 }
