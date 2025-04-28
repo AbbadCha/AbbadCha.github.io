@@ -69,18 +69,28 @@ function filterGallery(category) {
 
 // Initialize portfolio filters
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize date picker
+    // Initialize date picker with Flatpickr
     const dateInput = document.getElementById('date');
     if (dateInput) {
         flatpickr(dateInput, {
-            minDate: 'today',
-            dateFormat: 'Y-m-d',
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+            minDate: "today",
+            maxDate: new Date().fp_incr(90), // Allow booking up to 90 days in advance
+            disable: ["Sunday"],
+            locale: {
+                firstDayOfWeek: 1 // Start week on Monday
+            },
+            time_24hr: false,
+            minTime: "09:00",
+            maxTime: "17:00",
+            minuteIncrement: 30,
             altInput: true,
-            altFormat: 'F j, Y',
+            altFormat: "F j, Y at h:i K",
+            ariaDateFormat: "F j, Y at h:i K",
             disableMobile: true, // Force the native datepicker to be disabled on mobile
-            enableTime: false,
-            allowInput: true, // Allow manual input
-            parseDate: (datestr, format) => {
+            allowInput: true,
+            parseDate: (datestr) => {
                 return new Date(datestr);
             },
             errorHandler: (error) => {
