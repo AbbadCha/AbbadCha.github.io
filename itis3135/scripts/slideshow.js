@@ -3,6 +3,13 @@ $(document).ready(function() {
     const slides = $('.slide');
     const totalSlides = slides.length;
 
+    // Show specific slide
+    function showSlide(n) {
+        slides.removeClass('active-slide');
+        currentSlide = (n + totalSlides) % totalSlides;
+        slides.eq(currentSlide).addClass('active-slide');
+    }
+
     // Create thumbnails
     slides.each(function(index) {
         const img = $(this).find('img');
@@ -15,13 +22,6 @@ $(document).ready(function() {
             });
         $('.thumbnail-container').append(thumbnail);
     });
-
-    // Show specific slide
-    function showSlide(n) {
-        slides.removeClass('active');
-        currentSlide = (n + totalSlides) % totalSlides;
-        slides.eq(currentSlide).addClass('active');
-    }
 
     // Change slide
     window.changeSlide = function(direction) {
