@@ -1,14 +1,15 @@
+// Define showSlide function first
+function showSlide(n, slides, totalSlides) {
+    slides.removeClass('active-slide');
+    const currentSlide = (n + totalSlides) % totalSlides;
+    slides.eq(currentSlide).addClass('active-slide');
+    return currentSlide;
+}
+
 $(document).ready(function() {
     let currentSlide = 0;
     const slides = $('.slide');
     const totalSlides = slides.length;
-
-    // Show specific slide
-    function showSlide(n) {
-        slides.removeClass('active-slide');
-        currentSlide = (n + totalSlides) % totalSlides;
-        slides.eq(currentSlide).addClass('active-slide');
-    }
 
     // Create thumbnails
     slides.each(function(index) {
@@ -18,14 +19,14 @@ $(document).ready(function() {
             .attr('alt', img.attr('alt'))
             .addClass('thumbnail')
             .click(function() {
-                showSlide(index);
+                currentSlide = showSlide(index, slides, totalSlides);
             });
         $('.thumbnail-container').append(thumbnail);
     });
 
     // Change slide
     window.changeSlide = function(direction) {
-        showSlide(currentSlide + direction);
+        currentSlide = showSlide(currentSlide + direction, slides, totalSlides);
     };
 
     // Keyboard navigation
@@ -37,8 +38,11 @@ $(document).ready(function() {
         }
     });
 
+    // Show initial slide
+    currentSlide = showSlide(0, slides, totalSlides);
+
     // Auto advance slides every 5 seconds
     setInterval(function() {
-        changeSlide(1);
+        currentSlide = showSlide(currentSlide + 1, slides, totalSlides);
     }, 5000);
 });
