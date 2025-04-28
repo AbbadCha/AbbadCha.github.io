@@ -215,23 +215,23 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Blog Grid */
+/* Blog Section */
 .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem;
-    width: 100%;
-    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .blog-post {
+    flex: 1 1 300px;
+    min-width: 300px;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
 }
 
 .blog-post img {
