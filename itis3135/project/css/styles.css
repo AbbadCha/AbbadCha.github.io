@@ -217,13 +217,12 @@ main {
 }
 
 .service-card {
-    width: calc(33.333% - 2rem);
-    margin: 1rem;
+    width: 31.333%;
+    margin: 8px;
     background-color: #ffffff;
-    padding: 2rem;
+    padding: 16px;
     border-radius: 8px;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px #00000020;
 }
 
 @media (max-width: 992px) {
@@ -248,21 +247,20 @@ main {
     padding: 2rem;
 }
 
-.blog-grid:after {
+.blog-grid::after {
     content: "";
-    display: table;
+    display: block;
     clear: both;
 }
 
 .blog-post {
     float: left;
-    width: calc(33.333% - 1.334rem);
-    margin: 1rem;
+    width: 31.333%;
+    margin: 8px;
     background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px #00000020;
 }
 
 @media (max-width: 992px) {
