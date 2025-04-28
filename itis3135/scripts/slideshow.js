@@ -11,17 +11,11 @@ $(document).ready(function() {
     const slides = $('.slide');
     const totalSlides = slides.length;
 
-    // Create thumbnails
-    slides.each(function(index) {
-        const img = $(this).find('img');
-        const thumbnail = $('<img>')
-            .attr('src', img.attr('src'))
-            .attr('alt', img.attr('alt'))
-            .addClass('thumbnail')
-            .click(function() {
-                currentSlide = showSlide(index, slides, totalSlides);
-            });
-        $('.thumbnail-container').append(thumbnail);
+    // Add click handlers to thumbnails
+    $('.thumbnail').each(function(index) {
+        $(this).click(function() {
+            currentSlide = showSlide(index, slides, totalSlides);
+        });
     });
 
     // Change slide
