@@ -12,7 +12,7 @@ $(document).ready(function() {
     const totalSlides = slides.length;
 
     // Add click handlers to thumbnails
-    $('.thumbnail').each(function(index) {
+    $('.thumbnail-list li').each(function(index) {
         $(this).click(function() {
             currentSlide = showSlide(index, slides, totalSlides);
         });
