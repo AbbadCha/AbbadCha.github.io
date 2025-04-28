@@ -172,10 +172,10 @@ main {
 /* Gallery Section */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 326px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 2rem;
-    justify-content: center;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -184,8 +184,8 @@ main {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 326px;
-    height: 326px;
+    aspect-ratio: 1;
+    max-width: 1136px;
 }
 
 @media (max-width: 1200px) {
