@@ -297,7 +297,30 @@ main {
 }
 
 .form-group {
-    margin-block-end: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-text {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.flatpickr {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.flatpickr:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
 }
 
 .form-group label {

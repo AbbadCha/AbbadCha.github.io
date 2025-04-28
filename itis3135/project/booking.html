@@ -6,6 +6,7 @@
     <title>Book Now | ZC Photography</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -56,8 +57,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="date">Preferred Date *</label>
-                    <input type="date" id="date" name="date" required>
+                    <label for="date">Preferred Date and Time *</label>
+                    <input type="text" id="date" name="date" class="flatpickr" placeholder="Select date and time" required>
+                    <small class="form-text">Click to select your preferred date and time. Available hours: 9 AM - 5 PM</small>
                 </div>
 
                 <div class="form-group">

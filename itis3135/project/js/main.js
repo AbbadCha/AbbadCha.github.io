@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             locale: {
                 firstDayOfWeek: 1 // Start week on Monday
             },
-            time_24hr: false,
+            use24Hour: false,
             minTime: "09:00",
             maxTime: "17:00",
             minuteIncrement: 30,
