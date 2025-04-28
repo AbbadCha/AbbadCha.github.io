@@ -101,6 +101,18 @@
             margin-bottom: 15px;
         }
 
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         .ai-prompts ul {
             list-style-type: none;
             padding-left: 0;
@@ -178,7 +190,8 @@
             <a class="prev" onclick="changeSlide(-1)">❮</a>
             <a class="next" onclick="changeSlide(1)">❯</a>
 
-            <div class="thumbnail-container" aria-label="Slideshow thumbnails">
+            <div class="thumbnail-container">
+                <h3 class="visually-hidden">Slideshow Thumbnails</h3>
                 <img src="images/slideshow/optimized/apple-100x100.jpg" alt="A for Apple" width="100" height="100" loading="lazy" class="thumbnail">
                 <img src="images/slideshow/optimized/banana-100x100.jpg" alt="B for Banana" width="100" height="100" loading="lazy" class="thumbnail">
                 <img src="images/slideshow/optimized/balloon-100x100.jpg" alt="B for Balloon" width="100" height="100" loading="lazy" class="thumbnail">
