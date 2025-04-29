@@ -106,10 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterButtons.forEach((button) => {
         button.addEventListener('click', () => {
-            // Remove active state from all buttons
-            filterButtons.forEach((btn) => btn.setAttribute('data-active', 'false'));
-            // Set active state on clicked button
-            button.setAttribute('data-active', 'true');
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove('filter-active'));
+            // Add active class to clicked button
+            button.classList.add('filter-active');
             filterGallery(button.dataset.category);
         });
     });
