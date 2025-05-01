@@ -375,23 +375,36 @@ button {
     margin-bottom: 20px;
 }
 
-.instructions {
-    max-width: 600px;
-    margin: 20px auto;
+.usage-guide {
     padding: 20px;
     background-color: #f5f5f5;
     border-radius: 5px;
 }
 
-.instructions-heading {
+.usage-guide__title {
     margin-top: 0;
     color: #333;
 }
 
-.instructions ul {
-    list-style-type: disc;
-    padding-left: 20px;
+.usage-guide__steps {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
 }
+
+.usage-guide__step {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.usage-guide__step:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
 .project-image {
     max-width: 100%;
     height: auto;
