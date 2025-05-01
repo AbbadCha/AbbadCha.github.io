@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!filterButtons.length) return;
 
     filterButtons.forEach((button) => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
             // Remove active class from all buttons
             filterButtons.forEach((btn) => btn.classList.remove('filter-active'));
             // Add active class to clicked button
