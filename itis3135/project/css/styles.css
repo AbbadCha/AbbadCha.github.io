@@ -411,7 +411,7 @@ footer {
     }
 }
 
-.footer-info h3 {
+.footer-title {
     color: var(--primary-color, #e67e22);
     margin-bottom: 1rem;
 }
