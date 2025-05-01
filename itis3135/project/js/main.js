@@ -58,13 +58,13 @@ function validateForm() {
  * @param {string} category - The category to filter by
  */
 function filterGallery(category) {
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    if (!galleryItems.length) return;
-
-    galleryItems.forEach((item) => {
-        const categories = item.dataset.category.split(' ');
-        const display = category === 'all' || categories.includes(category) ? 'block' : 'none';
-        item.style.display = display;
+    const items = document.querySelectorAll('.gallery-item');
+    items.forEach((item) => {
+        if (!category || item.getAttribute('data-category') === category) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
     });
 }
 
@@ -100,17 +100,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     const filterButtons = document.querySelectorAll('.filter-btn');
     if (!filterButtons.length) return;
 
     filterButtons.forEach((button) => {
         button.addEventListener('click', (e) => {
+            const wasActive = button.classList.contains('filter-active');
             // Remove active class from all buttons
             filterButtons.forEach((btn) => btn.classList.remove('filter-active'));
-            // Add active class to clicked button
-            button.classList.add('filter-active');
-            filterGallery(button.dataset.category);
+
+            if (!wasActive) {
+                // Add active class to clicked button if it wasn't active before
+                button.classList.add('filter-active');
+                // Filter by category
+                filterGallery(button.getAttribute('data-category'));
+            } else {
+                // If the button was already active, show all items
+                filterGallery(null);
+            }
         });
     });
 });
